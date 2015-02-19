@@ -1,12 +1,17 @@
 @import url("http://fast.fonts.net/cssapi/00b288de-c5d2-4a89-9265-98564d75d01d.css");
 body {
-  font-family: "HelveticaNeueETW01-55Rg";
   margin: 0;
   padding: 0;
   min-width: 100% !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
 }
 p {
   font-family: "HelveticaNeueETW01-55Rg";
+  color: #fff;
+  font-size: 0.75rem;
 }
 .header {
   padding: 0;
@@ -19,11 +24,11 @@ img {
   max-width: 600px;
 }
 .subhead {
-  font-size: 15;
-  color: #fff;
   font-family: 'HelveticaNeueETW01-45Lt';
-  letter-spacing: 10px;
-  padding: 0 0 0 10px;
+  color: #fff;
+  font-size: 0.9375rem;
+  letter-spacing: 0.625rem;
+  padding: 0 0 0 0.625rem;
 }
 .h1,
 .h2 {
@@ -31,70 +36,71 @@ img {
   font-family: "HelveticaNeueETW01-65Md";
 }
 .h1 {
-  font-size: 33px;
-  line-height: 38px;
+  font-size: 2.0625rem;
+  line-height: 2.375rem;
   font-weight: bold;
 }
 .h2 {
-  padding: 0 0 15px 0;
-  font-size: 24px;
-  line-height: 28px;
+  padding: 0 0 0.9375rem 0;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   font-weight: bold;
 }
 .h3 {
-  color: #fff;
-  font-size: 20px;
-  line-height: 22px;
   font-family: "HelveticaNeueETW01-65Md";
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.375rem;
   font-weight: bold;
-  padding: 8px 0 8px 8px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 .menufont {
-  color: #646a7a;
-  font-size: 16px;
-  line-height: 28px;
+  line-height: 1.75rem;
   font-family: 'HelveticaNeueW01-47LtCn_692686';
-  font-weight: normal;
+  color: #646a7a;
+  font-size: 1rem;
 }
 .bodycopy {
-  color: #fff;
   font-family: 'HelveticaNeueETW01-45Lt';
-  font-size: 16px;
-  line-height: 22px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.375rem;
 }
 .innerpadding {
-  padding: 20px 40px 20px 40px;
+  padding: 1.25rem 2.5rem 1.25rem 2.5rem;
 }
 .innerpadding_2 {
-  padding-right: 40px;
-  padding-bottom: 20px;
+  padding-right: 2.5rem;
+  padding-bottom: 1.25rem;
 }
 .innerpadding_3 {
-  padding: 20px 40px 10px 40px;
+  padding: 1.25rem 2.5rem 0.625rem 2.5rem;
 }
 .footer {
-  padding: 20px 30px 15px 30px;
+  padding: 1.25rem 1.875rem 0.9375rem 1.875rem;
 }
 .footercopy {
-  font-family: sans-serif;
-  font-size: 14px;
+  font-family: 'HelveticaNeueETW01-45Lt';
   color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .footercopy a {
   color: #0f3446;
   text-decoration: underline;
 }
 table.tables {
-  font: 14px HelveticaNeueETW01-65Md;
+  font-family: "HelveticaNeueETW01-65Md";
   color: #fff;
+  font-size: 0.875rem;
   table-layout: fixed;
   width: 100%;
-  max-width: 600px;
-  padding: 20px 15px 20px 15px;
+  max-width: 37.5rem;
+  padding: 1.25rem 0.9375rem 1.25rem 0.9375rem;
 }
 table.tables tr td {
-  border-top: 1px solid #9ba0aa;
-  border-bottom: 1px solid #9ba0aa;
+  border-top: 0.0625rem solid #9ba0aa;
+  border-bottom: 0.0625rem solid #9ba0aa;
 }
 table.tables .Rank {
   width: 10%;
@@ -116,20 +122,31 @@ table.tables .Amount {
 table.Total {
   color: #fff;
   width: 100%;
-  max-width: 200px;
+  max-width: 12.5rem;
   font-family: 'HelveticaNeueETW01-65Md';
-  line-height: 20px;
-  padding: 15px 15px 15px 15px;
+  line-height: 1.25rem;
+  padding: 0.9375rem 0.9375rem 0.9375rem 0.9375rem;
 }
 table.Total tr td {
   text-align: right;
 }
 table.delivery {
+  font-family: "HelveticaNeueETW01-55Rg";
   color: #fff;
-  font-size: 16px;
-  font-family: HelveticaNeueETW01-55Rg;
+  font-size: 1rem;
 }
 table.delivery tr td {
   text-align: left;
 }
-/*Functions*/
+/*
+font-family:'HelveticaNeueETW01-45Lt';
+font-family:'HelveticaNeueETW01-46Lt';
+font-family:'HelveticaNeueETW01-55Rg';
+font-family:'HelveticaNeueETW01-56It';
+font-family:'HelveticaNeueETW01-65Md';
+font-family:'HelveticaNeueETW01-66Md';
+font-family:'HelveticaNeueETW01-75Bd';
+font-family:'HelveticaNeueETW01-76Bd';
+font-family:'HelveticaNeueW01-47LtCn_692686';
+
+*/

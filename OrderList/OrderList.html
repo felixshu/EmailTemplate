@@ -7,8 +7,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Confirmation</title>
     <style type="text/css">
-    @media only screen and (max-width: 550px),
-    screen and (max-device-width: 550px) {
+    @import url("http://fast.fonts.net/cssapi/00b288de-c5d2-4a89-9265-98564d75d01d.css");
+    body {
+        margin: 0;
+        padding: 0;
+        min-width: 100% !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        font-family: "HelveticaNeueETW01-55Rg";
+        color: #ffffff
+;
+        font-size: 0.75rem;
+    }
+    .header {
+        padding: 0;
+    }
+    img {
+        height: auto;
+    }
+    .content {
+        width: 100%;
+        max-width: 600px;
+    }
+    .subhead {
+        font-family: 'HelveticaNeueETW01-45Lt';
+        color: #ffffff;
+        font-size: 0.9375rem;
+        letter-spacing: 0.625rem;
+        padding: 0 0 0 0.625rem;
+    }
+    .h1,
+    .h2 {
+        color: #ffffff;
+        font-family: "HelveticaNeueETW01-65Md";
+    }
+    .h1 {
+        font-size: 2.0625rem;
+        line-height: 2.375rem;
+        font-weight: bold;
+    }
+    .h2 {
+        padding: 0 0 0.9375rem 0;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        font-weight: bold;
+    }
+    .h3 {
+        font-family: "HelveticaNeueETW01-65Md";
+        color: #ffffff;
+        font-size: 1.25rem;
+        line-height: 1.375rem;
+        font-weight: bold;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+    }
+    .menufont {
+        line-height: 1.75rem;
+        font-family: 'HelveticaNeueW01-47LtCn_692686';
+        color: #646a7a;
+        font-size: 1rem;
+    }
+    .bodycopy {
+        font-family: 'HelveticaNeueETW01-45Lt';
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.375rem;
+    }
+    .innerpadding {
+        padding: 1.25rem 2.5rem 1.25rem 2.5rem;
+    }
+    .innerpadding_2 {
+        padding-right: 2.5rem;
+        padding-bottom: 1.25rem;
+    }
+    .innerpadding_3 {
+        padding: 1.25rem 2.5rem 0.625rem 2.5rem;
+    }
+    .footer {
+        padding: 1.25rem 1.875rem 0.9375rem 1.875rem;
+    }
+    .footercopy {
+        font-family: 'HelveticaNeueETW01-45Lt';
+        color: #ffffff;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    .footercopy a {
+        color: #0f3446;
+        text-decoration: underline;
+    }
+    table.tables {
+        font-family: "HelveticaNeueETW01-65Md";
+        color: #ffffff;
+        font-size: 0.875rem;
+        table-layout: fixed;
+        width: 100%;
+        max-width: 37.5rem;
+        padding: 1.25rem 0.9375rem 1.25rem 0.9375rem;
+    }
+    table.tables tr td {
+        border-top: 0.0625rem solid #9ba0aa;
+        border-bottom: 0.0625rem solid #9ba0aa;
+    }
+    table.tables .Rank {
+        width: 10%;
+        text-align: center;
+        font-family: 'HelveticaNeueETW01-65Md';
+    }
+    table.tables .Name {
+        width: 40%;
+    }
+    table.tables .Quantity {
+        width: 15%;
+    }
+    table.tables .Price {
+        width: 20%;
+    }
+    table.tables .Amount {
+        width: 15%;
+    }
+    table.Total {
+        color: #ffffff;
+        width: 100%;
+        max-width: 12.5rem;
+        font-family: 'HelveticaNeueETW01-65Md';
+        line-height: 1.25rem;
+        padding: 0.9375rem 0.9375rem 0.9375rem 0.9375rem;
+    }
+    table.Total tr td {
+        text-align: right;
+    }
+    table.delivery {
+        font-family: "HelveticaNeueETW01-55Rg";
+        color: #ffffff;
+        font-size: 1rem;
+    }
+    table.delivery tr td {
+        text-align: left;
+    }
+    @media only screen and (max-width: 550px),screen and (max-device-width: 550px) {
         body[yahoo] .hide {
             display: none!important;
         }
@@ -35,15 +175,6 @@
     /* Client-specific Styles */
     
     #outlook a {
-        padding: 0;
-    }
-    /* Force Outlook to provide a "view in browser" menu link. */
-    
-    body {
-        width: 100% !important;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        margin: 0;
         padding: 0;
     }
     /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
@@ -200,7 +331,7 @@
     <link rel="stylesheet" href="style/style.css" />
 </head>
 
-<body yahoo bgcolor="#2f2f2f">
+<body yahoo bgcolor="#2f2f2f" class="innerpadding">
     <table id="backgroundTable" width="100%" bgcolor="#2f2f2f" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td>
@@ -259,7 +390,7 @@
                                 </tr>
                                 <tr>
                                     <td class="bodycopy">
-                                        This email is to inform that your order has been confirmed. You will recieve invoce seperately 2 days after delievery of you order. Additionaly, orders placed on weekends and public holidays will be dispatched on the next working day.  If any items in your order are temporarily or permanently out of stock, we will contact you to arrange a refund, exchange or credit note for those items. 
+                                        This email is to inform that your order has been confirmed. You will recieve invoce seperately 2 days after delievery of you order. Additionaly, orders placed on weekends and public holidays will be dispatched on the next working day. If any items in your order are temporarily or permanently out of stock, we will contact you to arrange a refund, exchange or credit note for those items.
                                     </td>
                                 </tr>
                             </table>
@@ -320,101 +451,31 @@
                                 </tr>
                                 <tr>
                                     <td align="center">01</td>
-                                    <td>CVT 5+,500g</td>
-                                    <td align="center">13</td>
-                                    <td align="center">$28.20</td>
-                                    <td align="center">$366.60</td>
+                                    <td>Good Health Omega 3 fish oil 1500mg 400caps</td>
+                                    <td align="center">1</td>
+                                    <td align="center">$49.80</td>
+                                    <td align="center">$49.80</td>
                                 </tr>
                                 <tr>
                                     <td align="center">02</td>
-                                    <td>MH 550+, 500g</td>
+                                    <td>NUTRA-LIFE LIQUID CALCIUM</td>
                                     <td align="center">2</td>
-                                    <td align="center">$70.00</td>
-                                    <td align="center">$140.00</td>
+                                    <td align="center">$12.00</td>
+                                    <td align="center">$24.00</td>
                                 </tr>
                                 <tr>
                                     <td align="center">03</td>
-                                    <td>帕氏麦卢卡蜂蜜婴儿润肤乳80ml</td>
-                                    <td align="center">5</td>
-                                    <td align="center">$5.48</td>
-                                    <td align="center">$27.40</td>
+                                    <td>Good Health Spirulina Hawaiian grown 200 tablets </td>
+                                    <td align="center">1</td>
+                                    <td align="center">$22.00</td>
+                                    <td align="center">$22.00</td>
                                 </tr>
                                 <tr>
                                     <td align="center">04</td>
-                                    <td>帕氏麦卢卡蜂蜜礼盒4件套</td>
+                                    <td>Radiance Kids Colostrum</td>
                                     <td align="center">2</td>
-                                    <td align="center">$21.00</td>
-                                    <td align="center">$42.00</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">05</td>
-                                    <td>帕氏绵羊油手甲霜85ml</td>
-                                    <td align="center">5</td>
-                                    <td align="center">$7.2</td>
-                                    <td align="center">$36.00</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">06</td>
-                                    <td>Jack N'Jill 儿童牙膏 50g</td>
-                                    <td align="center">5</td>
-                                    <td align="center">$6.89</td>
-                                    <td align="center">$34.45</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">07</td>
-                                    <td>奶片</td>
-                                    <td align="center">10</td>
-                                    <td align="center">$4.20</td>
-                                    <td align="center">$42.00</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">08</td>
-                                    <td>Radiance Ageless 胶原蛋白</td>
-                                    <td align="center">2</td>
-                                    <td align="center">$38.50</td>
-                                    <td align="center">$77.00</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">09</td>
-                                    <td>CTV PEL15 蜂胶胶囊365粒</td>
-                                    <td align="center">2</td>
-                                    <td align="center">$87.00</td>
-                                    <td align="center">$174.00</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">10</td>
-                                    <td>帕氏绵蜂蜜手甲霜85ml</td>
-                                    <td align="center">5</td>
-                                    <td align="center">$7.20</td>
-                                    <td align="center">$36.00</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">11</td>
-                                    <td>MH30+,500g</td>
-                                    <td align="center">3</td>
-                                    <td align="center">$17.25</td>
-                                    <td align="center">$51.75</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">12</td>
-                                    <td>Old Gold Coco 70% 220g</td>
-                                    <td align="center">20</td>
-                                    <td align="center">$3.1</td>
-                                    <td align="center">$62.00</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">13</td>
-                                    <td>Lucas Papaw Ointment 25G</td>
-                                    <td align="center">1</td>
-                                    <td align="center">$12.50</td>
-                                    <td align="center">$12.50</td>
-                                </tr>
-                                <tr>
-                                    <td align="center">14</td>
-                                    <td>Eco Shampo &amp; Conditioner</td>
-                                    <td align="center">4</td>
-                                    <td align="center">$9.90</td>
-                                    <td align="center">$39.60</td>
+                                    <td align="center">$12.99</td>
+                                    <td align="center">$26.00</td>
                                 </tr>
                             </table>
                         </td>
@@ -428,15 +489,15 @@
                                 </tr>
                                 <tr>
                                     <td>Subtotal:&nbsp;</td>
-                                    <td>$1,134.30</td>
+                                    <td>$121.80</td>
                                 </tr>
                                 <tr>
                                     <td>Shipping:&nbsp;</td>
-                                    <td>$188.80</td>
+                                    <td>$0.00</td>
                                 </tr>
                                 <tr style="font-weight: bold">
                                     <td>Total:&nbsp;</td>
-                                    <td>$1323.00</td>
+                                    <td>$121.80</td>
                                 </tr>
                             </table>
                         </td>
@@ -510,12 +571,13 @@
                                         <img src="ftp://felixgrayson.synology.me/public/images/location.png" height="57" width="57" alt="Location">
                                     </td>
                                     <td width="200px" style="padding-left: 20px">
-                                        13A/89 Victoria Street<br/>
-                                        Auckland City Center<br/>
-                                        1010<br/>
-                                        New Zealand<br/>
+                                        13A/89 Victoria Street
+                                        <br/> Auckland City Center
+                                        <br/> 1010
+                                        <br/> New Zealand
+                                        <br/>
                                     </td>
-                                     <td width="57">
+                                    <td width="57">
                                         <img src="ftp://felixgrayson.synology.me/public/images/mobile.png" height="57" width="57" alt="Mobile">
                                     </td>
                                     <td style="padding-left: 20px">
