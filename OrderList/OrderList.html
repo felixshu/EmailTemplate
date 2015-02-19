@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <style type="text/css">
+    @media only screen and (max-width: 550px),
+    screen and (max-device-width: 550px) {
+        body[yahoo] .hide {
+            display: none!important;
+        }
+        body[yahoo] .buttonwrapper {
+            background-color: transparent!important;
+        }
+        body[yahoo] .button {
+            padding: 0px!important;
+        }
+        body[yahoo] .button a {
+            background-color: #e05443;
+            padding: 15px 15px 13px!important;
+        }
+        body[yahoo] .unsubscribe {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 50px;
+            background: #2f3942;
+            border-radius: 5px;
+            text-decoration: none!important;
+            font-weight: bold;
+        }
+    }
+    /* Client-specific Styles */
+    
+    #outlook a {
+        padding: 0;
+    }
+    /* Force Outlook to provide a "view in browser" menu link. */
+    
+    body {
+        width: 100% !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+    
+    .ExternalClass {
+        width: 100%;
+    }
+    /* Force Hotmail to display emails at full width */
+    
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+        line-height: 100%;
+    }
+    /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+    
+    #backgroundTable {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        line-height: 100% !important;
+    }
+    /* End reset */
+    /* Some sensible defaults for images
+        1. "-ms-interpolation-mode: bicubic" works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)
+        2. "border:none" removes border when linking images.
+        3. Updated the common Gmail/Hotmail image display fix: Gmail and Hotmail unwantedly adds in an extra space below images when using non IE browsers. You may not always want all of your images to be block elements. Apply the "image_fix" class to any image you need to fix.
+
+        Bring inline: Yes.
+        */
+    
+    img {
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+    }
+    a img {
+        border: none;
+    }
+    .image_fix {
+        display: block;
+    }
+    /** Yahoo paragraph fix: removes the proper spacing or the paragraph (p) tag. To correct we set the top/bottom margin to 1em in the head of the document. Simple fix with little effect on other styling. NOTE: It is also common to use two breaks instead of the paragraph tag but I think this way is cleaner and more semantic. NOTE: This example recommends 1em. More info on setting web defaults: http://www.w3.org/TR/CSS21/sample.html or http://meiert.com/en/blog/20070922/user-agent-style-sheets/
+
+        Bring inline: Yes.
+        **/
+    
+    p {
+        margin: 1em 0;
+    }
+    /** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black for a non-linked header, blue for a linked header, red for an active header (limited support), and purple for a visited header (limited support).  Replace with your choice of color. The !important is really what is overriding Hotmail's styling. Hotmail also sets the H1 and H2 tags to the same size.
+
+        Bring inline: Yes.
+        **/
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #ffffff !important;
+    }
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+        color: blue !important;
+    }
+    h1 a:active,
+    h2 a:active,
+    h3 a:active,
+    h4 a:active,
+    h5 a:active,
+    h6 a:active {
+        color: red !important;
+        /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+    }
+    h1 a:visited,
+    h2 a:visited,
+    h3 a:visited,
+    h4 a:visited,
+    h5 a:visited,
+    h6 a:visited {
+        color: purple !important;
+        /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+    }
+    /** Outlook 07, 10 Padding issue: These "newer" versions of Outlook add some padding around table cells potentially throwing off your perfectly pixeled table.  The issue can cause added space and also throw off borders completely.  Use this fix in your header or inline to safely fix your table woes.
+
+        More info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells/
+        http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07/
+
+        H/T @edmelly
+
+        Bring inline: No.
+        **/
+    
+    table td {
+        border-collapse: collapse;
+    }
+    /** Remove spacing around Outlook 07, 10 tables
+
+        More info : http://www.campaignmonitor.com/blog/post/3694/removing-spacing-from-around-tables-in-outlook-2007-and-2010/
+
+        Bring inline: Yes
+        **/
+    
+    table {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+    }
+    /* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email, bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+
+        Bring inline: Yes. */
+    
+    a {
+        color: white;
+    }
+    @media only screen and (max-device-width: 480px) {
+        /* A nice and clean way to target phone numbers you want clickable and avoid a mobile phone from linking other numbers that look like, but are not phone numbers.  Use these two blocks of code to "unstyle" any numbers that may be linked.  The second block gives you a class to apply with a span tag to the numbers you would like linked and styled.
+
+            Inspired by Campaign Monitor's article on using phone numbers in email: http://www.campaignmonitor.com/blog/post/3571/using-phone-numbers-in-html-email/.
+
+            Step 1 (Step 2: line 224)
+            */
+        
+        a[href^="tel"],
+        a[href^="sms"] {
+            text-decoration: none;
+            color: black;
+            /* or whatever your want */
+            
+            pointer-events: none;
+            cursor: default;
+        }
+        .mobile_link a[href^="tel"],
+        .mobile_link a[href^="sms"] {
+            text-decoration: default;
+            color: black !important;
+            /* or whatever your want */
+            
+            pointer-events: auto;
+            cursor: default;
+        }
+    }
+    </style>
+
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body yahoo bgcolor="#2f2f2f">
+    <table id="backgroundTable" width="100%" bgcolor="#2f2f2f" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <!--[if (gte mso 9)|(IE)]>
+            <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+            <![endif]-->
+                <table bgcolor="#52596b" class="content" align="center" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td bgcolor="#0f3446" class="header">
+                            <table bgcolor="#fd6e6e" width="142" align="left" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="142" style="padding: 0;">
+                                        <img class="fix" src="http://felixgrayson.synology.me/photo/share/Kzyi774u/photo_44657367696e_6261672e706e67" width="100%" height="100%" border="0" alt="This is your shopping bag" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                        <table width="425" align="left" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td>
+                        <![endif]-->
+                            <table class="col425" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 425px;">
+                                <tr>
+                                    <td height="142">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td class="subhead">
+                                                    -Grayson-
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="h1" style="padding: 8px 0 0 10px;">
+                                                    Order Confirmation
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="innerpadding intro">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td class="h2">
+                                        Dear Mr./Ms.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bodycopy">
+                                        This email is to inform that your order has been confirmed. You will recieve invoce seperately 2 days after delievery of you order. Additionaly, orders placed on weekends and public holidays will be dispatched on the next working day.  If any items in your order are temporarily or permanently out of stock, we will contact you to arrange a refund, exchange or credit note for those items. 
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="List">
+                            <table width="100%" bgcolor="#0f3446" align="left" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <table bgcolor="#36e2be" width="80" align="left" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="80" style="padding: 0;">
+                                                    <img class="fix" src="images/shoppinglist.png" width="80" height="80" border="0" alt="" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                    <table width="440" align="left" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td>
+                                    <![endif]-->
+                                        <table class="col80" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 500px;">
+                                            <tr>
+                                                <td height="80">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td class="h3">
+                                                                Product List
+                                                            </td>
+                                                            <td align="right" class="menufont">
+                                                                Tue, Feburary 17
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="innerpadding">
+                            <table class="tables" border="0" cellpadding="10" cellspacing="0">
+                                <tr>
+                                    <th class="Rank">Rank</th>
+                                    <th class="Name">Name</th>
+                                    <th class="Quantity">Quantity</th>
+                                    <th class="Price">Unit Price</th>
+                                    <th class="Amount">Amount</th>
+                                </tr>
+                                <tr>
+                                    <td align="center">01</td>
+                                    <td>CVT 5+,500g</td>
+                                    <td align="center">13</td>
+                                    <td align="center">$28.20</td>
+                                    <td align="center">$366.60</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">02</td>
+                                    <td>MH 550+, 500g</td>
+                                    <td align="center">2</td>
+                                    <td align="center">$70.00</td>
+                                    <td align="center">$140.00</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">03</td>
+                                    <td>帕氏麦卢卡蜂蜜婴儿润肤乳80ml</td>
+                                    <td align="center">5</td>
+                                    <td align="center">$5.48</td>
+                                    <td align="center">$27.40</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">04</td>
+                                    <td>帕氏麦卢卡蜂蜜礼盒4件套</td>
+                                    <td align="center">2</td>
+                                    <td align="center">$21.00</td>
+                                    <td align="center">$42.00</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">05</td>
+                                    <td>帕氏绵羊油手甲霜85ml</td>
+                                    <td align="center">5</td>
+                                    <td align="center">$7.2</td>
+                                    <td align="center">$36.00</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">06</td>
+                                    <td>Jack N'Jill 儿童牙膏 50g</td>
+                                    <td align="center">5</td>
+                                    <td align="center">$6.89</td>
+                                    <td align="center">$34.45</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">07</td>
+                                    <td>奶片</td>
+                                    <td align="center">10</td>
+                                    <td align="center">$4.20</td>
+                                    <td align="center">$42.00</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">08</td>
+                                    <td>Radiance Ageless 胶原蛋白</td>
+                                    <td align="center">2</td>
+                                    <td align="center">$38.50</td>
+                                    <td align="center">$77.00</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">09</td>
+                                    <td>CTV PEL15 蜂胶胶囊365粒</td>
+                                    <td align="center">2</td>
+                                    <td align="center">$87.00</td>
+                                    <td align="center">$174.00</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">10</td>
+                                    <td>帕氏绵蜂蜜手甲霜85ml</td>
+                                    <td align="center">5</td>
+                                    <td align="center">$7.20</td>
+                                    <td align="center">$36.00</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">11</td>
+                                    <td>MH30+,500g</td>
+                                    <td align="center">3</td>
+                                    <td align="center">$17.25</td>
+                                    <td align="center">$51.75</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">12</td>
+                                    <td>Old Gold Coco 70% 220g</td>
+                                    <td align="center">20</td>
+                                    <td align="center">$3.1</td>
+                                    <td align="center">$62.00</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">13</td>
+                                    <td>Lucas Papaw Ointment 25G</td>
+                                    <td align="center">1</td>
+                                    <td align="center">$12.50</td>
+                                    <td align="center">$12.50</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">14</td>
+                                    <td>Eco Shampo &amp; Conditioner</td>
+                                    <td align="center">4</td>
+                                    <td align="center">$9.90</td>
+                                    <td align="center">$39.60</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" class="innerpadding_2">
+                            <table class="Total" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td></td>
+                                    <td style="font-weight: bold; text-align: center">NZD</td>
+                                </tr>
+                                <tr>
+                                    <td>Subtotal:&nbsp;</td>
+                                    <td>$1,134.30</td>
+                                </tr>
+                                <tr>
+                                    <td>Shipping:&nbsp;</td>
+                                    <td>$188.80</td>
+                                </tr>
+                                <tr style="font-weight: bold">
+                                    <td>Total:&nbsp;</td>
+                                    <td>$1323.00</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="List">
+                            <table width="100%" bgcolor="#0f3446" align="left" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <table bgcolor="#ffac79" width="80" align="left" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="80" style="padding: 0;">
+                                                    <img class="fix" src="images/box.png" width="80" height="80" border="0" alt="Delivery Details" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                    <table width="440" align="left" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td>
+                                    <![endif]-->
+                                        <table class="col80" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 500px;">
+                                            <tr>
+                                                <td height="80">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td class="h3">
+                                                                Delivery Details
+                                                            </td>
+                                                            <td align="right" class="menufont">
+                                                                Tue, Feburary 20
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="innerpadding_3">
+                            <table class="delivery" width="100%" border="0" align="center" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="57">
+                                        <img src="images/user.png" height="57" width="57" alt="User Name">
+                                    </td>
+                                    <td width="200px">Felix Shu</td>
+                                    <td width="57">
+                                        <img src="images/email.png" height="57" width="57" alt="Email Address">
+                                    </td>
+                                    <td>
+                                        <a href="mailto:felixgrasyon@hotmail.com">felixgrasyon<br/>@hotmail.com</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="innerpadding_3">
+                            <table class="delivery" width="100%" border="0" align="center" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="57">
+                                        <img src="images/location.png" height="57" width="57" alt="User Name">
+                                    </td>
+                                    <td width="200px">
+                                        13A/89 Victoria Street<br/>
+                                        Auckland City Center<br/>
+                                        1010<br/>
+                                        New Zealand<br/>
+                                    </td>
+                                     <td width="57">
+                                        <img src="images/mobile.png" height="57" width="57" alt="Email Address">
+                                    </td>
+                                    <td>
+                                        <a href="tel:+640221266951">+64-022-126-6951</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="footer" bgcolor="#0f3446">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center" class="footercopy">
+                                        &reg; Someone, somewhere 2013
+                                        <br/>
+                                        <a href="#" class="unsubscribe">
+                                            <font color="#ffffff">Unsubscribe</font>
+                                        </a>
+                                        <span class="hide">from this newsletter instantly</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 20px 0 0 0;">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
+                                                    <a href="http://www.facebook.com/">
+                                                        <img src="images/facebook.png" width="37" height="37" alt="Facebook" border="0" />
+                                                    </a>
+                                                </td>
+                                                <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
+                                                    <a href="http://www.twitter.com/">
+                                                        <img src="images/twitter.png" width="37" height="37" alt="Twitter" border="0" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

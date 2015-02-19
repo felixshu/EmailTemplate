@@ -1,0 +1,135 @@
+@import url("http://fast.fonts.net/cssapi/00b288de-c5d2-4a89-9265-98564d75d01d.css");
+body {
+  font-family: "HelveticaNeueETW01-55Rg";
+  margin: 0;
+  padding: 0;
+  min-width: 100% !important;
+}
+p {
+  font-family: "HelveticaNeueETW01-55Rg";
+}
+.header {
+  padding: 0;
+}
+img {
+  height: auto;
+}
+.content {
+  width: 100%;
+  max-width: 600px;
+}
+.subhead {
+  font-size: 15;
+  color: #fff;
+  font-family: 'HelveticaNeueETW01-45Lt';
+  letter-spacing: 10px;
+  padding: 0 0 0 10px;
+}
+.h1,
+.h2 {
+  color: #fff;
+  font-family: "HelveticaNeueETW01-65Md";
+}
+.h1 {
+  font-size: 33px;
+  line-height: 38px;
+  font-weight: bold;
+}
+.h2 {
+  padding: 0 0 15px 0;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+}
+.h3 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 22px;
+  font-family: "HelveticaNeueETW01-65Md";
+  font-weight: bold;
+  padding: 8px 0 8px 8px;
+}
+.menufont {
+  color: #646a7a;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: 'HelveticaNeueW01-47LtCn_692686';
+  font-weight: normal;
+}
+.bodycopy {
+  color: #fff;
+  font-family: 'HelveticaNeueETW01-45Lt';
+  font-size: 16px;
+  line-height: 22px;
+}
+.innerpadding {
+  padding: 20px 40px 20px 40px;
+}
+.innerpadding_2 {
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+.innerpadding_3 {
+  padding: 20px 40px 10px 40px;
+}
+.footer {
+  padding: 20px 30px 15px 30px;
+}
+.footercopy {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+.footercopy a {
+  color: #0f3446;
+  text-decoration: underline;
+}
+table.tables {
+  font: 14px HelveticaNeueETW01-65Md;
+  color: #fff;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px 15px 20px 15px;
+}
+table.tables tr td {
+  border-top: 1px solid #9ba0aa;
+  border-bottom: 1px solid #9ba0aa;
+}
+table.tables .Rank {
+  width: 10%;
+  text-align: center;
+  font-family: 'HelveticaNeueETW01-65Md';
+}
+table.tables .Name {
+  width: 40%;
+}
+table.tables .Quantity {
+  width: 15%;
+}
+table.tables .Price {
+  width: 20%;
+}
+table.tables .Amount {
+  width: 15%;
+}
+table.Total {
+  color: #fff;
+  width: 100%;
+  max-width: 200px;
+  font-family: 'HelveticaNeueETW01-65Md';
+  line-height: 20px;
+  padding: 15px 15px 15px 15px;
+}
+table.Total tr td {
+  text-align: right;
+}
+table.delivery {
+  color: #fff;
+  font-size: 16px;
+  font-family: HelveticaNeueETW01-55Rg;
+}
+table.delivery tr td {
+  text-align: left;
+}
+/*Functions*/
