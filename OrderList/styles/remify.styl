@@ -1,0 +1,17 @@
+// ***********
+// VARIABLES
+// ***********
+$font_base = 16
+$px = (1/$font_base) rem
+
+// ***********
+// FUNCTIONS
+// ***********
+
+remify( $size )
+  _unit = unit( $size )
+  if _unit == 'px'
+  	unit($size/16, 'rem')
+  else
+  	unit($size, u)
+

@@ -1,0 +1,132 @@
+@import 'nib'
+@import remify
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700')
+@import url('http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900')
+@import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300')
+
+
+// *************
+// VARIANCE
+// *************
+BGcolor = #515A6B
+TitleColor = #273646
+fontcolor = #FAFAFA
+mailBG = #F9FAF5
+datecolor = #C8CACE
+TBline = #B4BBC2
+
+$rem = (1 / 16)rem
+
+// *************
+// MIXINs
+// *************
+
+// *************
+// ELEMENTS
+// *************
+.content
+	width 100%
+	max-width: remify(600px)
+	
+.header
+	width 100%
+
+.h1,.h2,.h3,.h4,.h5,.h6
+	color: fontcolor !important
+	
+.h1
+	font-family: arial, sans-serif
+	font-size: 30*$rem
+	line-height: 34*$rem
+	font-weight: bold
+	
+.h2
+	font-family: 'Lato', sans-serif
+	line-height: 30*$rem
+	font-weight: 300
+	font-size: 25*$rem
+	padding 0 0 0 remify(20px)
+	
+.normal
+	font-family: 'Open Sans', sans-serif
+	line-height: 24*$rem
+	font-weight: 300
+	font-size: 18*$rem
+	color fontcolor
+	
+.date
+	font-family: 'Open Sans Condensed', sans-serif
+	line-height: 24*$rem
+	font-weight: 300
+	font-size: 18*$rem
+	color datecolor
+	text-align: right
+	padding 0 remify(20px) 0 0
+	
+p
+	@extend .normal
+	margin remify(3px), 0
+	
+.innerpadding_2
+	padding 0 30px
+
+.OrNum
+	font-family: 'Open Sans', sans-serif
+	line-height: 18*$rem
+	font-weight: 300
+	font-size: 13*$rem
+	color fontcolor
+	padding 20*$rem 30*$rem 5*$rem 30*$rem
+.tables
+	tr th
+		font-family: 'Open Sans', sans-serif
+		line-break: 19*$rem
+		font-size: 14*$rem
+		font-weight: 600
+		padding remify(10px) remify(15px)
+		border-bottom: 3px solid TBline
+		text-align: center
+		color fontcolor
+	tr td
+		font-family: 'Lato', sans-serif
+		line-height: 16*$rem
+		font-weight: 300
+		font-size: 13*$rem
+		color fontcolor
+		padding 10*$rem 13*$rem
+		border-bottom: 1px solid TBline
+		text-align: center
+		&:nth-child(2)
+			text-align: left
+			padding: remify(10px), 0
+.total
+	font-family: 'Lato', sans-serif
+	line-height: 16*$rem
+	font-weight: 300
+	font-size: 13*$rem
+	padding 10*$rem 13*$rem
+	color fontcolor
+	tr td
+		&:nth-child(1)
+			text-align: right
+		&:nth-child(2)
+			text-align: center
+			padding 10*$rem 0
+.client
+	font-family: arial, sans-serif
+	line-height: 16*$rem
+	font-weight: 300
+	font-size: 13*$rem
+	color fontcolor
+	img
+		padding 15*$rem
+		
+.footer
+	font-family: 'Lato', sans-serif
+	line-height: 22*$rem
+	font-weight: 100
+	font-size: 18*$rem
+	color #ffffff
+	
+			
+

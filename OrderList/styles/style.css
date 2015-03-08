@@ -1,0 +1,118 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+.content {
+  width: 100%;
+  max-width: 37.5rem;
+}
+.header {
+  width: 100%;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #fafafa !important;
+}
+.h1 {
+  font-family: arial, sans-serif;
+  font-size: 1.875rem;
+  line-height: 2.125rem;
+  font-weight: bold;
+}
+.h2 {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.875rem;
+  font-weight: 300;
+  font-size: 1.5625rem;
+  padding: 0 0 0 1.25rem;
+}
+.normal,
+p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: #fafafa;
+}
+.date {
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: #c8cace;
+  text-align: right;
+  padding: 0 1.25rem 0 0;
+}
+p {
+  margin: 0.1875rem, 0;
+}
+.innerpadding_2 {
+  padding: 0 30px;
+}
+.OrNum {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.125rem;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  color: #fafafa;
+  padding: 1.25rem 1.875rem 0.3125rem 1.875rem;
+}
+.tables tr th {
+  font-family: 'Open Sans', sans-serif;
+  line-break: 1.1875rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 0.9375rem;
+  border-bottom: 3px solid #b4bbc2;
+  text-align: center;
+  color: #fafafa;
+}
+.tables tr td {
+  font-family: 'Lato', sans-serif;
+  line-height: 1rem;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  color: #fafafa;
+  padding: 0.625rem 0.8125rem;
+  border-bottom: 1px solid #b4bbc2;
+  text-align: center;
+}
+.tables tr td:nth-child(2) {
+  text-align: left;
+  padding: 0.625rem, 0;
+}
+.total {
+  font-family: 'Lato', sans-serif;
+  line-height: 1rem;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  padding: 0.625rem 0.8125rem;
+  color: #fafafa;
+}
+.total tr td:nth-child(1) {
+  text-align: right;
+}
+.total tr td:nth-child(2) {
+  text-align: center;
+  padding: 0.625rem 0;
+}
+.client {
+  font-family: arial, sans-serif;
+  line-height: 1rem;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  color: #fafafa;
+}
+.client img {
+  padding: 0.9375rem;
+}
+.footer {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.375rem;
+  font-weight: 100;
+  font-size: 1.125rem;
+  color: #fff;
+}
