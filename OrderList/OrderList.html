@@ -9,6 +9,121 @@
     /* Based on The MailChimp Reset INLINE: Yes. */
     /* Client-specific Styles */
 
+    @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
+    @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+    @import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+    .content {
+        width: 100%;
+        max-width: 37.5rem;
+    }
+    .header {
+        width: 100%;
+    }
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        color: #fafafa !important;
+    }
+    .h1 {
+        font-family: arial, sans-serif;
+        font-size: 1.875rem;
+        line-height: 2.125rem;
+        font-weight: bold;
+    }
+    .h2 {
+        font-family: 'Lato', sans-serif;
+        line-height: 1.875rem;
+        font-weight: 300;
+        font-size: 1.5625rem;
+        padding: 0 0 0 1.25rem;
+    }
+    .normal,
+    .p {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.5rem;
+        font-weight: 300;
+        font-size: 1.125rem;
+        color: #fafafa;
+    }
+    .date {
+        font-family: 'Open Sans Condensed', sans-serif;
+        line-height: 1.5rem;
+        font-weight: 300;
+        font-size: 1.125rem;
+        color: #c8cace;
+        text-align: right;
+        padding: 0 1.25rem 0 0;
+    }
+    .innerpadding_2 {
+        padding: 0 30px;
+    }
+    .OrNum {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.125rem;
+        font-weight: 300;
+        font-size: 0.8125rem;
+        color: #fafafa;
+        padding: 1.25rem 1.875rem 0.3125rem 1.875rem;
+    }
+    .tables tr th {
+        font-family: 'Open Sans', sans-serif;
+        line-break: 1.1875rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 0.625rem 0.9375rem;
+        border-bottom: 3px solid #b4bbc2;
+        text-align: center;
+        color: #fafafa;
+    }
+    .tables tr td {
+        font-family: 'Lato', sans-serif;
+        line-height: 1rem;
+        font-weight: 300;
+        font-size: 0.8125rem;
+        color: #fafafa;
+        padding: 0.625rem 0.8125rem;
+        border-bottom: 1px solid #b4bbc2;
+        text-align: center;
+    }
+    .tables tr td:nth-child(2) {
+        text-align: left;
+        padding: 0.625rem, 0;
+    }
+    .total {
+        font-family: 'Lato', sans-serif;
+        line-height: 1rem;
+        font-weight: 300;
+        font-size: 0.8125rem;
+        padding: 0.625rem 0.8125rem;
+        color: #fafafa;
+    }
+    .total tr td:nth-child(1) {
+        text-align: right;
+    }
+    .total tr td:nth-child(2) {
+        text-align: center;
+        padding: 0.625rem 0;
+    }
+    .client {
+        font-family: arial, sans-serif;
+        line-height: 1rem;
+        font-weight: 300;
+        font-size: 0.8125rem;
+        color: #fafafa;
+    }
+    .client img {
+        padding: 0.9375rem;
+    }
+    .footer {
+        font-family: 'Lato', sans-serif;
+        line-height: 1.375rem;
+        font-weight: 100;
+        font-size: 1.125rem;
+        color: #fff;
+    }
     .innerpadding {
         padding: 30px 20px 30px 20px;
     }
@@ -68,39 +183,12 @@
     /* Hotmail header color reset
         Bring inline: Yes. */
 
-    h1 a,
-    h2 a,
-    h3 a,
-    h4 a,
-    h5 a,
-    h6 a {
-        color: #ffffff !important;
-    }
-    h1 a:active,
-    h2 a:active,
-    h3 a:active,
-    h4 a:active,
-    h5 a:active,
-    h6 a:active {
-        color: red !important;
-        /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
-    }
-    h1 a:visited,
-    h2 a:visited,
-    h3 a:visited,
-    h4 a:visited,
-    h5 a:visited,
-    h6 a:visited {
-        color: purple !important;
-        /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
-    }
-    /* Outlook 07, 10 Padding issue fix
-        Bring inline: No.*/
-
     table td {
         border-collapse: collapse;
         -webkit-border-horizontal-spacing: 0;
         -webkit-border-vertical-spacing: 0;
+        outline: 0;
+        border-color: transparent;
     }
     /* Remove spacing around Outlook 07, 10 tables
         Bring inline: Yes */
@@ -111,12 +199,46 @@
         mso-table-rspace: 0pt;
         -webkit-border-horizontal-spacing: 0;
         -webkit-border-vertical-spacing: 0;
+        outline: 0;
+        border-color: transparent;
     }
     /* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
         Bring inline: Yes. */
 
     a {
         color: #ffffff
+    }
+    @media only screen and (max-width: 550px),screen and (max-device-width: 550px) {
+        body[yahoo] .hide {
+            display: none!important;
+        }
+        body[yahoo] .unsubscribe {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 50px;
+            background: #2f3942;
+            border-radius: 5px;
+            text-decoration: none!important;
+            font-weight: bold;
+        }
+        a[href^="tel"],
+        a[href^="sms"] {
+            text-decoration: none;
+            color: black;
+            /* or whatever your want */
+
+            pointer-events: none;
+            cursor: default;
+        }
+        .mobile_link a[href^="tel"],
+        .mobile_link a[href^="sms"] {
+            text-decoration: default;
+            color: black !important;
+            /* or whatever your want */
+
+            pointer-events: auto;
+            cursor: default;
+        }
     }
     /***************************************************
         ****************************************************
@@ -167,42 +289,8 @@
             cursor: default;
         }
     }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-        /* Put your iPhone 4g styles in here */
-    }
-    /* Android targeting */
-
-    @media only screen and (-webkit-device-pixel-ratio: .75) {
-        /* Put CSS for low density (ldpi) Android layouts in here */
-    }
-    @media only screen and (-webkit-device-pixel-ratio: 1) {
-        /* Put CSS for medium density (mdpi) Android layouts in here */
-    }
-    @media only screen and (-webkit-device-pixel-ratio: 1.5) {
-        /* Put CSS for high density (hdpi) Android layouts in here */
-    }
-    /* end Android targeting */
     </style>
-
-    <!-- Targeting Windows Mobile -->
-    <!--[if IEMobile 7]>
-    <style type="text/css">
-
-    </style>
-    <![endif]-->
-
-    <!-- ***********************************************
-    ****************************************************
-    END MOBILE TARGETING
-    ****************************************************
-    ************************************************ -->
-
-    <!--[if gte mso 9]>
-        <style>
-        /* Target Outlook 2007 and 2010 */
-        </style>
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/style.css"> -->
 </head>
 
 <body yahoo bgcolor="#F9FAF5">
@@ -216,10 +304,10 @@
                         <![endif]-->
                 <table class="content" bgcolor="#515A6B" cellpadding="0" cellspacing="0" border="0" align="center">
                     <tr>
-                        <td valign="top" class="header" bgcolor="#273646" width="100%">
+                        <td valign="top" class="header"  width="100%">
                             <table cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
                                 <tr>
-                                    <td>
+                                    <td bgcolor="#273646">
                                         <img class="image_fix" src="ftp://felixgrayson.synology.me//public/orderlist/Header.png" alt="Shipping List" width="600px" height="194px" />
                                     </td>
                                 </tr>
